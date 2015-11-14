@@ -36,8 +36,8 @@ RUN conda install cython hdf5 pytables
 # Get plotly
 RUN pip install plotly
 
-# Get the latest gensim
-RUN pip install gensim
+# Get xgboost
+RUN pip install xgboost
 
 ENV PEM_FILE /key.pem
 # $PASSWORD will get `unset` within notebook.sh, turned into an IPython style hash
