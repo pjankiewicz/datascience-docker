@@ -33,11 +33,11 @@ RUN conda install psycopg2
 RUN conda install cython hdf5 pytables
 
 
-# Get plotly
-RUN pip install plotly
+# Get plotly, xgboost, snowballstemmer
+RUN pip install plotly xgboost snowballstemmer
 
-# Get xgboost
-RUN pip install xgboost
+# download data for nltk tokenizer
+RUN python -m nltk.downloader punkt
 
 ENV PEM_FILE /key.pem
 # $PASSWORD will get `unset` within notebook.sh, turned into an IPython style hash
