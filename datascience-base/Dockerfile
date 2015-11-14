@@ -44,7 +44,7 @@ RUN python -m nltk.downloader all
 
 ENV PEM_FILE /key.pem
 # $PASSWORD will get `unset` within notebook.sh, turned into an IPython style hash
-ENV PASSWORD Dont make this your default
+ENV PASSWORD datascience
 ENV USE_HTTP 1
 
 # Add current files to / and set entry point.
